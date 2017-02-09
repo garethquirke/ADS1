@@ -1,0 +1,7 @@
+https://kamyarns.wordpress.com/2013/05/02/implement-circular-queue-in-cpp/
+
+http://www.sanfoundry.com/cpp-program-implement-circular-queue/
+
+https://gist.github.com/mycodeschool/7331785
+https://www.youtube.com/watch?v=z3R9-DkVtds
+https://www.youtube.com/watch?v=_MRas1oEImA

@@ -1,0 +1,49 @@
+﻿1. Go through the iterations of strcpy() given as an example in Kernighan & Ritchie, The C Programming Language, 2nd Edition, Prentice Hall PTR, 1988, p.88 - 106 and explain their philosophy of brevity vs. clarity.
+
+Brevity vs. Clarity
+
+Brevity: quickly, swift
+Quicker execution and proccessing.
+
+Clarity: clear, distinct, crispness
+Keeping code clear and understandable regardless if it is the fastest method of dealing with the proccesses.
+
+
+The writing begins by comparing the benefit of recursion in terms of clarity and not brevity to an extent. From the offset we can see that their emphasis is on clarity of code that is 'easier to write and understand' than the alternative(non-recursive). Clarity is important in their philosphy as it adds the ease in which code can be updated and modifed without having to struggle through reading the entire program.
+
+2. Look at the code for strcpy() given on Moodle,, and explain the speed differences of the function implementations (why do some run faster than others). Note the C code given in this program is old and buggy, it needs to be updated to run in Visual Studio 2013 (for example there is no need any more to enum a bool type, and you will need to add
+
+#ifdef _MSC_VER
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
+at the start of your program – p.s what does this #define do?) Also you need to change the format specifier and cast the c_time to a float for the /1000 to work in the printf’s.
+
+
+Speed differences of function declarations
+For this comparison I'm going to look at two functions in strcpy(strcpy2 and stringcopy2).
+
+void strcpy2(char *s, char *t) 
+{
+  while ((*s++ = *t++) != '\0')
+    ;
+}
+
+char *stringcopy2(char *s, const char *t) {
+  char *r = s;
+
+  loop {
+    *r = *t;
+    if (*t == '\0') break;
+    r = r + 1; t = t + 1;
+  }
+  return s;
+}
+
+The first thing that stands out to me is the differnce in return type- void and a char pointer. The difference in time is 4 milliseconds between these two. The void function gains an advantage here because it is not waiting on data to be returned to it and then passed on. It can go through this process much faster.
+
+#define is a preprocessor directive. It is used to tell the preprocessor to replace all instances of identifier in the code with the given text before passing it on to the compiler. Identifiers can also be defined without values to be used as compiler flags to prevent multiple definitions of the same variables, or to branch on machine details that will not change during execution.
+
+
+
+

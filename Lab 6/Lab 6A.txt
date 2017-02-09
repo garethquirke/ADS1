@@ -1,0 +1,75 @@
+Question 1.
+
+Output:
+Sally
+Sally
+18
+18
+
+Both of the following have the same effect:
+(*head).name AND head->name
+(*head).number AND head->number
+
+Question 2.
+
+head-> = NULL;
+
+Question 3.
+
+head->item = "Wilbur's brother Orvile";
+
+Question 4.
+FINISH THIS QUESTION
+class NodeType{
+
+private:
+ char data;
+
+public:
+ NodeType();
+ NodeType(char data, NodeType* link):data(dataIn), link(linkIn){}
+ NodeType* getLink() c
+
+
+};
+
+
+
+Question 5.
+NULL is used to represent an empty list.
+
+Question 6.
+p1 = p1->next;
+
+Question 7.
+Pointer temp;
+temp = p2->next;
+p2->next = temp->next;
+
+Question 8.
+We will make p1 point to the next node in the list through the method
+getLink() which returns 'next'.
+
+p1 = p1->getLink();
+
+Question 9.
+Pointer temp;
+
+temp = p2->getLink();
+p2->setLink(temp->getLink());
+
+Question 10.
+
+a. more efficient.
+
+If you insert into an array you have to move alot of elements within the array to place the object in the desired location. This may be similar in effiencey if say the array size is storing only 3 where not many elements have to be moved. Linked Lists were designed for this purpose and the node pointer makes it very effiecent to move the order of items.
+
+
+
+
+
+
+
+
+
+ 
